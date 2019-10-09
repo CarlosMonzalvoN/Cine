@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dkT-K5-gtP">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eyh-kW-gXO">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,56 +10,159 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cine" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="94F-an-LsS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1105.7971014492755" y="120.53571428571428"/>
-        </scene>
         <!--Animation View Controller-->
         <scene sceneID="RrM-IC-QOE">
             <objects>
                 <viewController id="dkT-K5-gtP" customClass="AnimationViewController" customModule="Cine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4M-AN-3Fi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Xo-p8-zXM"/>
                     </view>
-                    <connections>
-                        <segue destination="LQl-f8-aDk" kind="show" identifier="firstView" id="0JQ-XH-cov"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yca-Mo-1AB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="121"/>
+            <point key="canvasLocation" x="-1230" y="137"/>
+        </scene>
+        <!--Películas-->
+        <scene sceneID="iDh-2m-nls">
+            <objects>
+                <collectionViewController id="Ics-gU-NAO" customClass="CarteleraViewController" customModule="Cine" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="D8w-hE-qKF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yOX-Lr-QjC">
+                            <size key="itemSize" width="199" height="201"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="CRf-W8-DY6" customClass="PeliculaCollectionViewCell" customModule="Cine" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTu-Jh-Cfd">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="imagenPelicula" destination="uTu-Jh-Cfd" id="9ou-Ax-xuU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ics-gU-NAO" id="2l4-0T-Oj5"/>
+                            <outlet property="delegate" destination="Ics-gU-NAO" id="hWE-sS-ydw"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Películas" image="iconPelis" id="n1s-41-vWN"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qpg-6b-dFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262.3188405797102" y="908.96739130434787"/>
+        </scene>
+        <!--Alimentos-->
+        <scene sceneID="H7w-1F-4ji">
+            <objects>
+                <collectionViewController id="7qP-k6-yow" customClass="AlimentosViewController" customModule="Cine" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9dN-sa-yHy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N5z-3O-2y1">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EGe-Kr-YaP">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7qP-k6-yow" id="YJU-KF-7A9"/>
+                            <outlet property="delegate" destination="7qP-k6-yow" id="B5g-ya-SKC"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Alimentos" image="iconPopCorn" id="lNP-nW-bH4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWc-vz-B4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="909"/>
+        </scene>
+        <!--Cines-->
+        <scene sceneID="G7G-Uj-F7a">
+            <objects>
+                <viewController id="PGT-yC-gvo" customClass="CinesViewController" customModule="Cine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEb-Sj-byc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="o00-y4-zcO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cines" image="iconPlaces" id="pk2-ip-N0I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXE-0K-1Am" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="909"/>
+        </scene>
+        <!--Cuenta-->
+        <scene sceneID="BgQ-IU-bMK">
+            <objects>
+                <viewController storyboardIdentifier="cuenta" id="U2R-kQ-1nI" customClass="CuentaViewController" customModule="Cine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ort-Du-MpC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="L9c-lc-HQ4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cuenta" image="iconBill" id="TdB-sg-kJO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AG2-qO-cWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="909"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="0eO-VW-Be4">
+        <scene sceneID="3IP-UL-hg1">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LQl-f8-aDk" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eyh-kW-gXO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wOF-LY-lc6">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qNI-rW-5Z5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BfK-ew-a2W"/>
+                        <segue destination="Ics-gU-NAO" kind="relationship" relationship="viewControllers" id="byg-wt-h7Z"/>
+                        <segue destination="7qP-k6-yow" kind="relationship" relationship="viewControllers" id="KUo-Kh-olE"/>
+                        <segue destination="PGT-yC-gvo" kind="relationship" relationship="viewControllers" id="8Qm-dJ-ACB"/>
+                        <segue destination="U2R-kQ-1nI" kind="relationship" relationship="viewControllers" id="8HQ-pO-NgZ"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="znA-OX-afA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kv9-ah-kvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195.6521739130435" y="120.53571428571428"/>
+            <point key="canvasLocation" x="-336" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconBill" width="23" height="23"/>
+        <image name="iconPelis" width="23" height="23"/>
+        <image name="iconPlaces" width="23" height="23"/>
+        <image name="iconPopCorn" width="23" height="23"/>
+    </resources>
 </document>

@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		6C52AD6F2348E013006B17DA /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52AD6E2348E013006B17DA /* AnimationViewController.swift */; };
 		6C52AD732348E243006B17DA /* cinema-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C52AD722348E243006B17DA /* cinema-animation.json */; };
+		6C6CBFF1234D4ADC00BC6E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C6CBFF0234D4ADC00BC6E78 /* Assets.xcassets */; };
+		6C6CBFF3234D57F600BC6E78 /* PeliculaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6CBFF2234D57F600BC6E78 /* PeliculaCollectionViewCell.swift */; };
+		6CC97459234C062800BEC7B6 /* CarteleraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC97458234C062800BEC7B6 /* CarteleraViewController.swift */; };
+		6CC9745B234C0C8000BEC7B6 /* AlimentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9745A234C0C8000BEC7B6 /* AlimentosViewController.swift */; };
+		6CC9745D234C0CDC00BEC7B6 /* CinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9745C234C0CDC00BEC7B6 /* CinesViewController.swift */; };
+		6CC9745F234C0CF600BEC7B6 /* CuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9745E234C0CF600BEC7B6 /* CuentaViewController.swift */; };
 		6CD613212347F31C009DE199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD613202347F31C009DE199 /* AppDelegate.swift */; };
-		6CD613232347F31C009DE199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD613222347F31C009DE199 /* ViewController.swift */; };
 		6CD613262347F31C009DE199 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD613242347F31C009DE199 /* Main.storyboard */; };
-		6CD613282347F31C009DE199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD613272347F31C009DE199 /* Assets.xcassets */; };
 		6CD6132B2347F31C009DE199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD613292347F31C009DE199 /* LaunchScreen.storyboard */; };
 		777CB8B192125DFF71F31055 /* Pods_Cine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6B81920BA82B2C93EA9F2D /* Pods_Cine.framework */; };
 /* End PBXBuildFile section */
@@ -22,11 +26,15 @@
 		62EF35BB51D459D1B36F993C /* Pods-Cine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cine.release.xcconfig"; path = "Target Support Files/Pods-Cine/Pods-Cine.release.xcconfig"; sourceTree = "<group>"; };
 		6C52AD6E2348E013006B17DA /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		6C52AD722348E243006B17DA /* cinema-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cinema-animation.json"; sourceTree = SOURCE_ROOT; };
+		6C6CBFF0234D4ADC00BC6E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C6CBFF2234D57F600BC6E78 /* PeliculaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculaCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CC97458234C062800BEC7B6 /* CarteleraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteleraViewController.swift; sourceTree = "<group>"; };
+		6CC9745A234C0C8000BEC7B6 /* AlimentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlimentosViewController.swift; sourceTree = "<group>"; };
+		6CC9745C234C0CDC00BEC7B6 /* CinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinesViewController.swift; sourceTree = "<group>"; };
+		6CC9745E234C0CF600BEC7B6 /* CuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuentaViewController.swift; sourceTree = "<group>"; };
 		6CD6131D2347F31C009DE199 /* Cine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD613202347F31C009DE199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6CD613222347F31C009DE199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6CD613252347F31C009DE199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6CD613272347F31C009DE199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CD6132A2347F31C009DE199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CD6132C2347F31C009DE199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AF2E1E7F044112E57A7CCE8 /* Pods-Cine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cine.debug.xcconfig"; path = "Target Support Files/Pods-Cine/Pods-Cine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,12 +75,16 @@
 			children = (
 				6CD613202347F31C009DE199 /* AppDelegate.swift */,
 				6C52AD722348E243006B17DA /* cinema-animation.json */,
-				6CD613222347F31C009DE199 /* ViewController.swift */,
+				6CC97458234C062800BEC7B6 /* CarteleraViewController.swift */,
+				6CC9745A234C0C8000BEC7B6 /* AlimentosViewController.swift */,
+				6CC9745C234C0CDC00BEC7B6 /* CinesViewController.swift */,
+				6CC9745E234C0CF600BEC7B6 /* CuentaViewController.swift */,
 				6CD613242347F31C009DE199 /* Main.storyboard */,
-				6CD613272347F31C009DE199 /* Assets.xcassets */,
+				6C6CBFF0234D4ADC00BC6E78 /* Assets.xcassets */,
 				6CD613292347F31C009DE199 /* LaunchScreen.storyboard */,
 				6CD6132C2347F31C009DE199 /* Info.plist */,
 				6C52AD6E2348E013006B17DA /* AnimationViewController.swift */,
+				6C6CBFF2234D57F600BC6E78 /* PeliculaCollectionViewCell.swift */,
 			);
 			path = Cine;
 			sourceTree = "<group>";
@@ -155,8 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CD6132B2347F31C009DE199 /* LaunchScreen.storyboard in Resources */,
-				6CD613282347F31C009DE199 /* Assets.xcassets in Resources */,
 				6CD613262347F31C009DE199 /* Main.storyboard in Resources */,
+				6C6CBFF1234D4ADC00BC6E78 /* Assets.xcassets in Resources */,
 				6C52AD732348E243006B17DA /* cinema-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,9 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6CBFF3234D57F600BC6E78 /* PeliculaCollectionViewCell.swift in Sources */,
+				6CC9745F234C0CF600BEC7B6 /* CuentaViewController.swift in Sources */,
+				6CC9745D234C0CDC00BEC7B6 /* CinesViewController.swift in Sources */,
 				6C52AD6F2348E013006B17DA /* AnimationViewController.swift in Sources */,
-				6CD613232347F31C009DE199 /* ViewController.swift in Sources */,
+				6CC97459234C062800BEC7B6 /* CarteleraViewController.swift in Sources */,
 				6CD613212347F31C009DE199 /* AppDelegate.swift in Sources */,
+				6CC9745B234C0C8000BEC7B6 /* AlimentosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

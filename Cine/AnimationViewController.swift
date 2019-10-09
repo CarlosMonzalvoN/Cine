@@ -15,7 +15,9 @@ class AnimationViewController: UIViewController {
         super.viewDidLoad()
         animation()
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { (Timer) in
-            self.performSegue(withIdentifier: "firstView", sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "cuenta")
+            self.present(controller, animated: true, completion: nil)
         }
     }
     func animation(){
