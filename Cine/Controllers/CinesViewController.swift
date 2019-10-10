@@ -10,6 +10,7 @@ import UIKit
 
 class CinesViewController: UIViewController {
 
+    @IBOutlet weak var imagePlace: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Anda en Cines")

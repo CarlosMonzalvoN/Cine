@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CuentaViewController: UIViewController {
+class BillViewController: UIViewController {
 
 
     override func viewDidLoad() {

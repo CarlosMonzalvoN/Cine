@@ -10,12 +10,13 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CarteleraViewController: UICollectionViewController {
+class MoviesViewController: UICollectionViewController {
 
+    var selectedMovie: MovieModel?
+    var movieServiceManager = CineAppManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Anda en Cartelera")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,6 +24,24 @@ class CarteleraViewController: UICollectionViewController {
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+
+    }
+
+    func loadData() {
+        movieServiceManager.updateMovies { [weak self] (finishedWithSuccess) in
+            guard finishedWithSuccess else {
+                //Error
+                return
+            }
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
     }
 
     /*
@@ -36,26 +55,29 @@ class CarteleraViewController: UICollectionViewController {
     */
 
     // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return movieServiceManager.movies.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PeliculaCollectionViewCell
-        
-        cell.imagenPelicula.image = UIImage(named: "joker")
-    
-        // Configure the cell
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MovieCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        let movie = movieServiceManager.movies[indexPath.row]
+        cell.update(with: movie)
         return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedMovie = movieServiceManager.movies[indexPath.row]
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? TicketsViewController, selectedMovie != nil else {
+            return
+        }
+        viewController.movie = selectedMovie
     }
 
     // MARK: UICollectionViewDelegate
@@ -89,4 +111,6 @@ class CarteleraViewController: UICollectionViewController {
     }
     */
 
+
 }
+
