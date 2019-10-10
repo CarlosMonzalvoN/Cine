@@ -8,13 +8,20 @@
 
 import Foundation
 
-struct TicketMovie {
-    var adult: Int
-    var child: Int
+class MovieTicket {
+    var isForChild: Bool?
+    var movie: MovieModel?
+    var screeningTime: MovieScreeningTime?
+    var seat: String?
+    var location: Location?
 
+    init() {}
 }
 
-struct TicketFood {
-    var name: String
-    var price: Int
+struct Location {
+    var lat: String?
+    var lon: String?
 }
+
+
+

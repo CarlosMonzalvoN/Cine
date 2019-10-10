@@ -51,9 +51,21 @@ class CineAppManager {
             }
 
             self.movies = moviesData.results
+            self.addTestingScreeningTimes(enabled: true)
             completion(true)
         }
         task.resume()
+    }
+
+    func addTestingScreeningTimes(enabled: Bool) {
+        if enabled {
+            var mockMovies: [MovieModel] = []
+            for movie in self.movies {
+                let mockMovie = movie.clone(addingTestScreeningTimes: MovieScreeningTime.getMovieScreeningTime(Int.random(in: 3...10)))
+                mockMovies.append(mockMovie)
+            }
+            self.movies = mockMovies
+        }
     }
 
     func moviePosterFullPath(forMovie movie: MovieModel, isThumbnail: Bool) -> String?  {

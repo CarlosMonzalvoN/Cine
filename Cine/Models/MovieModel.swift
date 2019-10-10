@@ -16,6 +16,14 @@ struct MovieModel: Codable {
     var id: Int!
     var original_title: String!
     var title: String!
+
+    var screeningTimes: [MovieScreeningTime]? = []
+
+    func clone(addingTestScreeningTimes screeningTimes: [MovieScreeningTime]) -> MovieModel {
+        let movie = MovieModel(poster_path: poster_path, adult: adult, overview: overview, release_date: release_date, id: id, original_title: original_title, title: title, screeningTimes: screeningTimes)
+        return movie
+    }
+
 }
 
 struct Dates: Codable {

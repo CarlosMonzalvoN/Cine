@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MovieScreeningTime {
+struct MovieScreeningTime: Codable {
 
     var hour: Int = 0
     var minute: Int = 0

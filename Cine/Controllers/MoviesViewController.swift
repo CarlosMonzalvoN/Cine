@@ -71,6 +71,7 @@ class MoviesViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedMovie = movieServiceManager.movies[indexPath.row]
+        self.performSegue(withIdentifier: "purchaseSegue", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
