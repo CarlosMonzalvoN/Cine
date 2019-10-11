@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C026E66234FFE6300ED394B /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E65234FFE6300ED394B /* TitleCell.swift */; };
+		6C026E68234FFEA800ED394B /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E67234FFEA800ED394B /* DescriptionCell.swift */; };
+		6C026E6A234FFF0C00ED394B /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E69234FFF0C00ED394B /* TicketCell.swift */; };
 		6C099015234E86210098D213 /* MovieScreeningTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099014234E86210098D213 /* MovieScreeningTime.swift */; };
 		6C099017234E87B70098D213 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099016234E87B70098D213 /* TicketsViewController.swift */; };
 		6C09901B234E90BE0098D213 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C09901A234E90BE0098D213 /* Tickets.swift */; };
@@ -31,6 +34,9 @@
 /* Begin PBXFileReference section */
 		2A6B81920BA82B2C93EA9F2D /* Pods_Cine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EF35BB51D459D1B36F993C /* Pods-Cine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cine.release.xcconfig"; path = "Target Support Files/Pods-Cine/Pods-Cine.release.xcconfig"; sourceTree = "<group>"; };
+		6C026E65234FFE6300ED394B /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		6C026E67234FFEA800ED394B /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		6C026E69234FFF0C00ED394B /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		6C099014234E86210098D213 /* MovieScreeningTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreeningTime.swift; sourceTree = "<group>"; };
 		6C099016234E87B70098D213 /* TicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		6C09901A234E90BE0098D213 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
@@ -66,17 +72,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C026E64234FFE4700ED394B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C026E65234FFE6300ED394B /* TitleCell.swift */,
+				6C026E67234FFEA800ED394B /* DescriptionCell.swift */,
+				6C026E69234FFF0C00ED394B /* TicketCell.swift */,
+				6C6CBFF2234D57F600BC6E78 /* MovieCollectionViewCell.swift */,
+				6C09901E234E99E80098D213 /* FoodCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6C099018234E87CE0098D213 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6C099016234E87B70098D213 /* TicketsViewController.swift */,
 				6C52AD6E2348E013006B17DA /* AnimationViewController.swift */,
 				6CC9745C234C0CDC00BEC7B6 /* PlaceMovieTheaterViewController.swift */,
 				6CC9745E234C0CF600BEC7B6 /* BillViewController.swift */,
 				6CC97458234C062800BEC7B6 /* MoviesViewController.swift */,
 				6CC9745A234C0C8000BEC7B6 /* FoodViewController.swift */,
-				6C099016234E87B70098D213 /* TicketsViewController.swift */,
-				6C6CBFF2234D57F600BC6E78 /* MovieCollectionViewCell.swift */,
-				6C09901E234E99E80098D213 /* FoodCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 		6CD6131F2347F31C009DE199 /* Cine */ = {
 			isa = PBXGroup;
 			children = (
+				6C026E64234FFE4700ED394B /* Cells */,
 				6C099018234E87CE0098D213 /* Controllers */,
 				6CD613202347F31C009DE199 /* AppDelegate.swift */,
 				6C099022234EBC9B0098D213 /* CineAppManager.swift */,
@@ -263,6 +280,8 @@
 				6C09901F234E99E80098D213 /* FoodCollectionViewCell.swift in Sources */,
 				6C099015234E86210098D213 /* MovieScreeningTime.swift in Sources */,
 				6C6CBFF3234D57F600BC6E78 /* MovieCollectionViewCell.swift in Sources */,
+				6C026E6A234FFF0C00ED394B /* TicketCell.swift in Sources */,
+				6C026E68234FFEA800ED394B /* DescriptionCell.swift in Sources */,
 				6C099017234E87B70098D213 /* TicketsViewController.swift in Sources */,
 				6CC9745F234C0CF600BEC7B6 /* BillViewController.swift in Sources */,
 				6C099023234EBC9B0098D213 /* CineAppManager.swift in Sources */,
@@ -271,6 +290,7 @@
 				6CC97459234C062800BEC7B6 /* MoviesViewController.swift in Sources */,
 				6CD613212347F31C009DE199 /* AppDelegate.swift in Sources */,
 				6C099025234EBDEF0098D213 /* UIImageView+extension.swift in Sources */,
+				6C026E66234FFE6300ED394B /* TitleCell.swift in Sources */,
 				6CC9745B234C0C8000BEC7B6 /* FoodViewController.swift in Sources */,
 				6C09901B234E90BE0098D213 /* Tickets.swift in Sources */,
 			);
