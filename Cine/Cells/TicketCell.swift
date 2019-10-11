@@ -28,6 +28,7 @@ class TicketCell: UITableViewCell {
     func add(adultTickets: Int){
         purchasedAdultTickets = []
         for _ in 0..<adultTickets {
+            let ticket = self.ticket.createNewTicketFromCurrentData()
             ticket.isForChild = false
             purchasedAdultTickets.append(ticket)
         }
@@ -36,6 +37,7 @@ class TicketCell: UITableViewCell {
     func add(childTickets: Int){
         purchasedChildTickets = []
         for _ in 0..<childTickets {
+            let ticket = self.ticket.createNewTicketFromCurrentData()
             ticket.isForChild = true
             purchasedChildTickets.append(ticket)
         }

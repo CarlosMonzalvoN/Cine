@@ -16,6 +16,16 @@ class MovieTicket {
     var location: Location?
 
     init() {}
+
+    func createNewTicketFromCurrentData() -> MovieTicket {
+        let ticket = MovieTicket()
+        ticket.isForChild = isForChild
+        ticket.movie = movie
+        ticket.screeningTime = screeningTime
+        ticket.seat = seat
+        ticket.location = location
+        return ticket
+    }
 }
 
 struct Location {

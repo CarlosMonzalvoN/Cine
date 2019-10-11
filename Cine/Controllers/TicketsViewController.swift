@@ -22,7 +22,9 @@ class TicketsViewController: UIViewController {
 
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var remainingTickets: UILabel!
     var movie: MovieModel?
+    var tickets: [MovieTicket] = []
     @IBOutlet weak var movieBackgroundView: UIImageView!
 
     override func viewDidLoad() {
@@ -30,6 +32,7 @@ class TicketsViewController: UIViewController {
         totalLabel.text = "0.0"
         tableView.dataSource = self
         tableView.delegate = self
+        remainingTickets.text = "Boletos Restantes: \(movie?.remainingSeats ?? 0)"
         configureBackground()
     }
 
@@ -46,6 +49,35 @@ class TicketsViewController: UIViewController {
 
     @IBAction func done(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func addToCart(_ sender: UIButton) {
+        guard let movie = movie else {
+            self.presentDefaultAlert(withMessage: "Ocurrio un error inesperado")
+            return
+        }
+        guard tickets.count > 0 else {
+            self.presentDefaultAlert(withMessage: "No has seleccionado ningun boleto")
+            return
+        }
+        guard tickets.count < movie.remainingSeats ?? 0 else {
+            self.presentDefaultAlert(withMessage: "Ya no quedan boletos disponibles")
+            return
+        }
+        let orderAlreadyInProgressMessage = OrderManager.shared.tickets.count > 0 ? "Ya tienes unos boletos en tu carrito si agregas estos sobre escribiras tu compra actual.": ""
+        let message = orderAlreadyInProgressMessage + "Estas seguro de agregar estos boletos a tu carrito?"
+        self.presentUserActionRequestAlert(withMessage: message ) { [weak self] (_) in
+            self?.overrideCurrentCartIfNecessary()
+            OrderManager.shared.tickets = self?.tickets ?? []
+            OrderManager.shared.movie = movie
+            CineAppManager.shared.updateMovieAvailability(adding: -(self?.tickets.count ?? 0), toMovie: movie)
+            self?.dismiss(animated: true, completion: nil)
+        }
+    }
+
+    func overrideCurrentCartIfNecessary() {
+        guard OrderManager.shared.tickets.count > 0, let movie = OrderManager.shared.movie else { return }
+        CineAppManager.shared.updateMovieAvailability(adding: OrderManager.shared.tickets.count, toMovie: movie)
     }
 
 
@@ -67,8 +99,9 @@ extension TicketsViewController: TicketCellProtocol, UITableViewDelegate, UITabl
         }
     }
     func ticketView(ticketsAvailable: [MovieTicket]) {
+        self.tickets = ticketsAvailable
         var total: Float = 0.0
-        for ticket in ticketsAvailable {
+        for ticket in tickets {
             let isForChild = ticket.isForChild ?? false
             total += isForChild ? 60.0 : 70.0
         }

@@ -17,6 +17,13 @@ class MoviesViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let itemSize = UIScreen.main.bounds.width/3
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView.collectionViewLayout = layout
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

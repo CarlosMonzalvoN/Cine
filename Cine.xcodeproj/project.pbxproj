@@ -10,6 +10,8 @@
 		6C026E66234FFE6300ED394B /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E65234FFE6300ED394B /* TitleCell.swift */; };
 		6C026E68234FFEA800ED394B /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E67234FFEA800ED394B /* DescriptionCell.swift */; };
 		6C026E6A234FFF0C00ED394B /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E69234FFF0C00ED394B /* TicketCell.swift */; };
+		6C026E6C2350008100ED394B /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E6B2350008100ED394B /* FoodModel.swift */; };
+		6C026E6E2350193E00ED394B /* FoodBillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C026E6D2350193E00ED394B /* FoodBillCell.swift */; };
 		6C099015234E86210098D213 /* MovieScreeningTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099014234E86210098D213 /* MovieScreeningTime.swift */; };
 		6C099017234E87B70098D213 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099016234E87B70098D213 /* TicketsViewController.swift */; };
 		6C09901B234E90BE0098D213 /* Tickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C09901A234E90BE0098D213 /* Tickets.swift */; };
@@ -37,6 +39,8 @@
 		6C026E65234FFE6300ED394B /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		6C026E67234FFEA800ED394B /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		6C026E69234FFF0C00ED394B /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
+		6C026E6B2350008100ED394B /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		6C026E6D2350193E00ED394B /* FoodBillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBillCell.swift; sourceTree = "<group>"; };
 		6C099014234E86210098D213 /* MovieScreeningTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreeningTime.swift; sourceTree = "<group>"; };
 		6C099016234E87B70098D213 /* TicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		6C09901A234E90BE0098D213 /* Tickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickets.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				6C026E69234FFF0C00ED394B /* TicketCell.swift */,
 				6C6CBFF2234D57F600BC6E78 /* MovieCollectionViewCell.swift */,
 				6C09901E234E99E80098D213 /* FoodCollectionViewCell.swift */,
+				6C026E6D2350193E00ED394B /* FoodBillCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 				6C099014234E86210098D213 /* MovieScreeningTime.swift */,
 				6C09901A234E90BE0098D213 /* Tickets.swift */,
 				6C099020234EA9970098D213 /* MovieModel.swift */,
+				6C026E6B2350008100ED394B /* FoodModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,10 +285,12 @@
 				6C099021234EA9970098D213 /* MovieModel.swift in Sources */,
 				6C09901F234E99E80098D213 /* FoodCollectionViewCell.swift in Sources */,
 				6C099015234E86210098D213 /* MovieScreeningTime.swift in Sources */,
+				6C026E6E2350193E00ED394B /* FoodBillCell.swift in Sources */,
 				6C6CBFF3234D57F600BC6E78 /* MovieCollectionViewCell.swift in Sources */,
 				6C026E6A234FFF0C00ED394B /* TicketCell.swift in Sources */,
 				6C026E68234FFEA800ED394B /* DescriptionCell.swift in Sources */,
 				6C099017234E87B70098D213 /* TicketsViewController.swift in Sources */,
+				6C026E6C2350008100ED394B /* FoodModel.swift in Sources */,
 				6CC9745F234C0CF600BEC7B6 /* BillViewController.swift in Sources */,
 				6C099023234EBC9B0098D213 /* CineAppManager.swift in Sources */,
 				6CC9745D234C0CDC00BEC7B6 /* PlaceMovieTheaterViewController.swift in Sources */,

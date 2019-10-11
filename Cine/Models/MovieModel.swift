@@ -16,11 +16,17 @@ struct MovieModel: Codable {
     var id: Int!
     var original_title: String!
     var title: String!
-
+    var remainingSeats: Int? = 0
     var screeningTimes: [MovieScreeningTime]? = []
 
     func clone(addingTestScreeningTimes screeningTimes: [MovieScreeningTime]) -> MovieModel {
-        let movie = MovieModel(poster_path: poster_path, adult: adult, overview: overview, release_date: release_date, id: id, original_title: original_title, title: title, screeningTimes: screeningTimes)
+        let movie = MovieModel(poster_path: poster_path, adult: adult, overview: overview, release_date: release_date, id: id, original_title: original_title, title: title,remainingSeats: Int.random(in: 0...60), screeningTimes: screeningTimes)
+        return movie
+    }
+
+    func clone(addingAvailability availability: Int) -> MovieModel {
+        let remainingSeats = self.remainingSeats ?? 0
+        let movie = MovieModel(poster_path: poster_path, adult: adult, overview: overview, release_date: release_date, id: id, original_title: original_title, title: title,remainingSeats: remainingSeats + availability, screeningTimes: screeningTimes)
         return movie
     }
 
