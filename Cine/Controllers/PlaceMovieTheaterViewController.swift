@@ -14,7 +14,7 @@ class PlaceMovieTheaterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Anda en Cines")
-        imagePlace.image = UIImage(named: "cine")
+        imagePlace.image = UIImage(named: "mapa")
         // Do any additional setup after loading the view.
     }
 

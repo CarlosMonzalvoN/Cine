@@ -20,8 +20,7 @@
 		6C099021234EA9970098D213 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099020234EA9970098D213 /* MovieModel.swift */; };
 		6C099023234EBC9B0098D213 /* CineAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099022234EBC9B0098D213 /* CineAppManager.swift */; };
 		6C099025234EBDEF0098D213 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C099024234EBDEF0098D213 /* UIImageView+extension.swift */; };
-		6C52AD6F2348E013006B17DA /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52AD6E2348E013006B17DA /* AnimationViewController.swift */; };
-		6C52AD732348E243006B17DA /* cinema-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C52AD722348E243006B17DA /* cinema-animation.json */; };
+		6C1DC807235148A2001E8065 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1DC806235148A2001E8065 /* OrderManager.swift */; };
 		6C6CBFF3234D57F600BC6E78 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6CBFF2234D57F600BC6E78 /* MovieCollectionViewCell.swift */; };
 		6CC97459234C062800BEC7B6 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC97458234C062800BEC7B6 /* MoviesViewController.swift */; };
 		6CC9745B234C0C8000BEC7B6 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC9745A234C0C8000BEC7B6 /* FoodViewController.swift */; };
@@ -49,8 +48,7 @@
 		6C099020234EA9970098D213 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		6C099022234EBC9B0098D213 /* CineAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CineAppManager.swift; sourceTree = "<group>"; };
 		6C099024234EBDEF0098D213 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
-		6C52AD6E2348E013006B17DA /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
-		6C52AD722348E243006B17DA /* cinema-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cinema-animation.json"; sourceTree = SOURCE_ROOT; };
+		6C1DC806235148A2001E8065 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
 		6C6CBFF2234D57F600BC6E78 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		6CC97458234C062800BEC7B6 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		6CC9745A234C0C8000BEC7B6 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				6C099016234E87B70098D213 /* TicketsViewController.swift */,
-				6C52AD6E2348E013006B17DA /* AnimationViewController.swift */,
 				6CC9745C234C0CDC00BEC7B6 /* PlaceMovieTheaterViewController.swift */,
 				6CC9745E234C0CF600BEC7B6 /* BillViewController.swift */,
 				6CC97458234C062800BEC7B6 /* MoviesViewController.swift */,
@@ -138,7 +135,7 @@
 				6C099018234E87CE0098D213 /* Controllers */,
 				6CD613202347F31C009DE199 /* AppDelegate.swift */,
 				6C099022234EBC9B0098D213 /* CineAppManager.swift */,
-				6C52AD722348E243006B17DA /* cinema-animation.json */,
+				6C1DC806235148A2001E8065 /* OrderManager.swift */,
 				6CD613242347F31C009DE199 /* Main.storyboard */,
 				6C09901C234E96FB0098D213 /* Assets.xcassets */,
 				6CD613292347F31C009DE199 /* LaunchScreen.storyboard */,
@@ -229,7 +226,6 @@
 				6CD6132B2347F31C009DE199 /* LaunchScreen.storyboard in Resources */,
 				6CD613262347F31C009DE199 /* Main.storyboard in Resources */,
 				6C09901D234E96FB0098D213 /* Assets.xcassets in Resources */,
-				6C52AD732348E243006B17DA /* cinema-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +283,7 @@
 				6C099015234E86210098D213 /* MovieScreeningTime.swift in Sources */,
 				6C026E6E2350193E00ED394B /* FoodBillCell.swift in Sources */,
 				6C6CBFF3234D57F600BC6E78 /* MovieCollectionViewCell.swift in Sources */,
+				6C1DC807235148A2001E8065 /* OrderManager.swift in Sources */,
 				6C026E6A234FFF0C00ED394B /* TicketCell.swift in Sources */,
 				6C026E68234FFEA800ED394B /* DescriptionCell.swift in Sources */,
 				6C099017234E87B70098D213 /* TicketsViewController.swift in Sources */,
@@ -294,7 +291,6 @@
 				6CC9745F234C0CF600BEC7B6 /* BillViewController.swift in Sources */,
 				6C099023234EBC9B0098D213 /* CineAppManager.swift in Sources */,
 				6CC9745D234C0CDC00BEC7B6 /* PlaceMovieTheaterViewController.swift in Sources */,
-				6C52AD6F2348E013006B17DA /* AnimationViewController.swift in Sources */,
 				6CC97459234C062800BEC7B6 /* MoviesViewController.swift in Sources */,
 				6CD613212347F31C009DE199 /* AppDelegate.swift in Sources */,
 				6C099025234EBDEF0098D213 /* UIImageView+extension.swift in Sources */,
